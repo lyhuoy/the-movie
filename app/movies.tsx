@@ -1,33 +1,22 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import {
   StyleSheet,
   View,
   Dimensions,
   StatusBar,
   Text,
-  Image,
   Animated,
   TouchableOpacity,
 } from 'react-native';
-import { movies } from '@/constants/dummy';
+import { tvShows } from '@/constants/dummy';
 import { useRouter } from 'expo-router';
-export default function ExploreScreen() {
+import { Image } from 'expo-image';
+export default function MoviesScreen() {
   const router = useRouter();
   const { width } = Dimensions.get('screen');
   const imageWidth = width * 0.7;
   const imageHeight = imageWidth * 1.54;
   const scrollX = useRef(new Animated.Value(0)).current;
-
-  const [newMovies, setNewMovies] = useState(movies);
-  const onEndReached = () => {
-    setNewMovies((prev) => [
-      ...prev,
-      ...movies.map((movie) => ({
-        ...movie,
-        id: Math.random(),
-      })),
-    ]);
-  };
 
   return (
     <View
@@ -38,7 +27,7 @@ export default function ExploreScreen() {
     >
       <StatusBar hidden />
       <View style={StyleSheet.absoluteFillObject}>
-        {newMovies.map((movie, index) => {
+        {tvShows.map((movie, index) => {
           const inputRange = [
             (index - 1) * width,
             index * width,
@@ -64,7 +53,7 @@ export default function ExploreScreen() {
         })}
       </View>
       <Animated.FlatList
-        data={newMovies}
+        data={tvShows}
         horizontal
         scrollEventThrottle={16}
         showsHorizontalScrollIndicator={false}
@@ -108,12 +97,14 @@ export default function ExploreScreen() {
               ]}
             >
               <Image
+                cachePolicy={'memory'}
                 source={{ uri: item.poster }}
                 style={{
                   width: imageWidth,
                   height: imageHeight,
                   borderRadius: 16,
                 }}
+                transition={500}
               />
               <TouchableOpacity
                 onPress={() => router.back()}
@@ -122,7 +113,7 @@ export default function ExploreScreen() {
                   alignItems: 'center',
                   width: imageWidth,
                   borderBottomLeftRadius: 16,
-                  gap: 5,
+                  gap: 8,
                 }}
               >
                 <Text
