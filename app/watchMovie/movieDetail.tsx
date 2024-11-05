@@ -14,7 +14,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import Entypo from '@expo/vector-icons/Entypo';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { LinearGradient } from 'expo-linear-gradient';
-import { animeSeries, movies } from '@/constants/dummy';
+import { animeSeries } from '@/constants/dummy';
 import Animated, {
   Extrapolation,
   interpolate,
@@ -22,6 +22,10 @@ import Animated, {
   useAnimatedStyle,
   useScrollViewOffset,
 } from 'react-native-reanimated';
+import Constants from 'expo-constants';
+import { BlurView } from 'expo-blur';
+import Ionicons from '@expo/vector-icons/Ionicons';
+
 export default function MovieDetail() {
   const params = useLocalSearchParams();
 
@@ -39,7 +43,7 @@ export default function MovieDetail() {
           translateY: interpolate(
             scrollOffset.value,
             [-IMAGE_HEIGHT, 0, IMAGE_HEIGHT],
-            [-IMAGE_HEIGHT, 0, IMAGE_HEIGHT * 0.75],
+            [-IMAGE_HEIGHT / 2, 0, IMAGE_HEIGHT * 0.85],
             Extrapolation.CLAMP
           ),
         },
@@ -60,7 +64,7 @@ export default function MovieDetail() {
       <View
         style={{
           position: 'absolute',
-          top: 50,
+          top: Constants.statusBarHeight,
           zIndex: 100,
           paddingHorizontal: 20,
           flexDirection: 'row',
@@ -72,27 +76,43 @@ export default function MovieDetail() {
         <TouchableOpacity
           onPress={() => router.back()}
           style={{
-            backgroundColor: 'rgba(255,255,255,0.3)',
-            width: 45,
-            height: 45,
             borderRadius: 50,
-            justifyContent: 'center',
-            alignItems: 'center',
+            overflow: 'hidden',
           }}
         >
-          <MaterialIcons name="arrow-back-ios-new" size={24} color="#fff" />
+          <BlurView
+            intensity={50}
+            tint="light"
+            style={{
+              height: 45,
+              width: 45,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Ionicons name="arrow-back-outline" size={24} color="white" />
+          </BlurView>
         </TouchableOpacity>
+
         <TouchableOpacity
+          onPress={() => router.back()}
           style={{
-            backgroundColor: 'rgba(255,255,255,0.3)',
-            width: 45,
-            height: 45,
             borderRadius: 50,
-            justifyContent: 'center',
-            alignItems: 'center',
+            overflow: 'hidden',
           }}
         >
-          <Feather name="more-vertical" size={24} color="#fff" />
+          <BlurView
+            intensity={50}
+            tint="light"
+            style={{
+              height: 45,
+              width: 45,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Feather name="more-vertical" size={24} color="#fff" />
+          </BlurView>
         </TouchableOpacity>
       </View>
       <Animated.ScrollView
@@ -220,24 +240,31 @@ export default function MovieDetail() {
 
             <TouchableOpacity
               style={{
-                backgroundColor: 'rgba(255,255,255,0.3)',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                paddingVertical: 15,
+                overflow: 'hidden',
                 borderRadius: 50,
-                gap: 8,
                 marginHorizontal: 20,
               }}
             >
-              <Entypo name="controller-play" size={20} color="white" />
-              <Text
+              <BlurView
+                tint="light"
                 style={{
-                  color: 'white',
-                  fontSize: 16,
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  paddingVertical: 15,
+                  gap: 8,
+                  alignItems: 'center',
                 }}
               >
-                Play
-              </Text>
+                <Entypo name="controller-play" size={20} color="white" />
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 16,
+                  }}
+                >
+                  Play
+                </Text>
+              </BlurView>
             </TouchableOpacity>
 
             <View

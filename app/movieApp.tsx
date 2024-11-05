@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import React from 'react';
-import { animeSeries, kdramaSeries } from '@/constants/dummy';
+import { kdramaSeries } from '@/constants/dummy';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Image } from 'expo-image';
 

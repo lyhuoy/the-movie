@@ -1,4 +1,5 @@
 import { MovieType } from '@/app/movieApp';
+import { BusDataType } from '@/app/redBus/TravelHistoryList';
 
 export const movies: MovieType[] = [
   {
@@ -694,5 +695,675 @@ export const animeMovies: MovieType[] = [
     poster: 'https://example.com/the_secret_world_of_arrietty.jpg',
     genre: 'Fantasy, Adventure',
     releaseDate: '2010-07-17',
+  },
+];
+
+export const travelHistory: BusDataType[] = [
+  {
+    busName: 'Gojo Transport',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'AC Sleeper',
+    from: 'Phnom Penh',
+    to: 'Siem Reap',
+    departureDate: 'Mon, 20 Sep 2024',
+    departureTime: '10:00 PM',
+    price: 25,
+  },
+  {
+    busName: 'Happy Trails',
+    busImage:
+      'https://static.vecteezy.com/system/resources/previews/021/623/400/non_2x/shirohige-pirate-one-piece-logo-anime-free-png.png',
+    busType: 'Non-AC Seater',
+    from: 'Siem Reap',
+    to: 'Battambang',
+    departureDate: 'Tue, 21 Sep 2024',
+    departureTime: '6:00 AM',
+    price: 15,
+  },
+  {
+    busName: 'Sunset Express',
+    busImage:
+      'https://i.pinimg.com/736x/bb/94/59/bb9459b5d010848aac14c230f347d818.jpg',
+    busType: 'AC Seater',
+    from: 'Battambang',
+    to: 'Kampot',
+    departureDate: 'Wed, 22 Sep 2024',
+    departureTime: '8:00 PM',
+    price: 30,
+  },
+  {
+    busName: 'Royal Bus',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'Sleeper',
+    from: 'Phnom Penh',
+    to: 'Sihanoukville',
+    departureDate: 'Thu, 23 Sep 2024',
+    departureTime: '9:00 PM',
+    price: 28,
+  },
+  {
+    busName: 'Budget Rides',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'Non-AC Seater',
+    from: 'Kampot',
+    to: 'Phnom Penh',
+    departureDate: 'Fri, 24 Sep 2024',
+    departureTime: '5:00 PM',
+    price: 12,
+  },
+  {
+    busName: 'Night Owl',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'AC Sleeper',
+    from: 'Siem Reap',
+    to: 'Phnom Penh',
+    departureDate: 'Sat, 25 Sep 2024',
+    departureTime: '11:30 PM',
+    price: 35,
+  },
+  {
+    busName: 'Express Travels',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'AC Seater',
+    from: 'Sihanoukville',
+    to: 'Battambang',
+    departureDate: 'Sun, 26 Sep 2024',
+    departureTime: '2:00 PM',
+    price: 40,
+  },
+  {
+    busName: 'Eco Bus',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'Non-AC Seater',
+    from: 'Kampot',
+    to: 'Siem Reap',
+    departureDate: 'Mon, 27 Sep 2024',
+    departureTime: '7:00 AM',
+    price: 18,
+  },
+  {
+    busName: 'Prime Travels',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'Sleeper',
+    from: 'Phnom Penh',
+    to: 'Kampot',
+    departureDate: 'Tue, 28 Sep 2024',
+    departureTime: '4:00 PM',
+    price: 26,
+  },
+  {
+    busName: 'Road King',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'AC Seater',
+    from: 'Battambang',
+    to: 'Siem Reap',
+    departureDate: 'Wed, 29 Sep 2024',
+    departureTime: '6:30 PM',
+    price: 22,
+  },
+  {
+    busName: 'Deluxe Coach',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'AC Sleeper',
+    from: 'Phnom Penh',
+    to: 'Battambang',
+    departureDate: 'Thu, 30 Sep 2024',
+    departureTime: '5:00 AM',
+    price: 33,
+  },
+  {
+    busName: 'Swift Travels',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'Non-AC Seater',
+    from: 'Sihanoukville',
+    to: 'Phnom Penh',
+    departureDate: 'Fri, 1 Oct 2024',
+    departureTime: '12:00 PM',
+    price: 20,
+  },
+  {
+    busName: 'Skyline',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'AC Sleeper',
+    from: 'Siem Reap',
+    to: 'Phnom Penh',
+    departureDate: 'Sat, 2 Oct 2024',
+    departureTime: '9:00 PM',
+    price: 32,
+  },
+  {
+    busName: 'Quick Rides',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'Non-AC Seater',
+    from: 'Kampot',
+    to: 'Sihanoukville',
+    departureDate: 'Sun, 3 Oct 2024',
+    departureTime: '3:00 PM',
+    price: 14,
+  },
+  {
+    busName: 'Value Bus',
+    busImage:
+      'https://www.coque-telephone.com/87994-large_default/pirate-sticker-one-piece-logo.jpg',
+    busType: 'Sleeper',
+    from: 'Phnom Penh',
+    to: 'Siem Reap',
+    departureDate: 'Mon, 4 Oct 2024',
+    departureTime: '8:00 PM',
+    price: 30,
+  },
+];
+
+export const mallCategories = [
+  // id, name and icon
+  {
+    id: 1,
+    name: 'Express',
+    icon: 'https://png.pngtree.com/png-vector/20240105/ourmid/pngtree-3d-delivery-man-red-scooter-png-image_11404978.png',
+    path: 'express',
+  },
+  {
+    id: 2,
+    name: 'Grocery',
+    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpyWD4TDKTEE8brIN8PAkD3NPvMam7ee4nWsDvI6Efyb-gf0qmU53GaPOelPP2KeZiFdg&usqp=CAU',
+    path: 'grocery',
+  },
+  {
+    id: 3,
+    name: 'Pick-up',
+    icon: 'https://cdn-icons-png.flaticon.com/512/10351/10351875.png',
+    path: 'pickup',
+  },
+  {
+    id: 4,
+    name: 'Movie',
+    icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/74d2a00a-b5c0-42d4-b131-fafcca22e4cf/d7ay4tw-1fa7c44d-2500-43ef-8d40-c16d939ca024.png',
+    path: 'movieTicket',
+  },
+  {
+    id: 5,
+    name: 'Gift Card',
+    icon: 'https://www.pngarts.com/files/11/Gift-Cards-PNG-Download-Image.png',
+    path: 'giftCard',
+  },
+];
+
+export const recentTransactions = [
+  {
+    id: 1,
+    date: 'Sep 12, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Treasure Hunt Prize',
+    transactionData: 'Jun 12, 2024',
+    transactionAmount: 200,
+  },
+  {
+    id: 2,
+    date: 'Sep 13, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Game Night Reward',
+    transactionData: 'Jun 15, 2024',
+    transactionAmount: 150,
+  },
+  {
+    id: 3,
+    date: 'Sep 14, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Weekly Bonus',
+    transactionData: 'Jun 18, 2024',
+    transactionAmount: 300,
+  },
+  {
+    id: 4,
+    date: 'Sep 15, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Challenge Completion',
+    transactionData: 'Jun 20, 2024',
+    transactionAmount: 250,
+  },
+  {
+    id: 5,
+    date: 'Sep 16, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Monthly Participation',
+    transactionData: 'Jun 22, 2024',
+    transactionAmount: 100,
+  },
+  {
+    id: 6,
+    date: 'Sep 17, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Referral Bonus',
+    transactionData: 'Jun 25, 2024',
+    transactionAmount: 50,
+  },
+  {
+    id: 7,
+    date: 'Sep 18, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'End of Season Prize',
+    transactionData: 'Jun 28, 2024',
+    transactionAmount: 400,
+  },
+  {
+    id: 8,
+    date: 'Sep 19, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Daily Challenge',
+    transactionData: 'Jul 01, 2024',
+    transactionAmount: 75,
+  },
+  {
+    id: 9,
+    date: 'Sep 20, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Weekend Special',
+    transactionData: 'Jul 04, 2024',
+    transactionAmount: 125,
+  },
+  {
+    id: 10,
+    date: 'Sep 21, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    title: 'Mystery Box Prize',
+    transactionData: 'Jul 07, 2024',
+    transactionAmount: 300,
+  },
+];
+
+export const activeWingpoint = [
+  {
+    id: 1,
+    title: 'Wingpoints',
+    date: 'Sep 12, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jun 12, 2024',
+    transactionAmount: 300,
+  },
+  {
+    id: 2,
+    title: 'Wingpoints',
+    date: 'Sep 18, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jun 15, 2024',
+    transactionAmount: 150,
+  },
+  {
+    id: 3,
+    title: 'Wingpoints',
+    date: 'Sep 14, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jun 18, 2024',
+    transactionAmount: 400,
+  },
+  {
+    id: 4,
+    title: 'Wingpoints',
+    date: 'Sep 15, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jun 20, 2024',
+    transactionAmount: 250,
+  },
+  {
+    id: 5,
+    title: 'Wingpoints',
+    date: 'Sep 16, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jun 22, 2024',
+    transactionAmount: 100,
+  },
+  {
+    id: 6,
+    title: 'Wingpoints',
+    date: 'Sep 17, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jun 25, 2024',
+    transactionAmount: 500,
+  },
+  {
+    id: 7,
+    title: 'Wingpoints',
+    date: 'Sep 18, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jun 28, 2024',
+    transactionAmount: 350,
+  },
+  {
+    id: 8,
+    title: 'Wingpoints',
+    date: 'Sep 19, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jul 01, 2024',
+    transactionAmount: 450,
+  },
+  {
+    id: 9,
+    title: 'Wingpoints',
+    date: 'Sep 20, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jul 04, 2024',
+    transactionAmount: 250,
+  },
+  {
+    id: 10,
+    title: 'Wingpoints',
+    date: 'Sep 21, 2024',
+    icon: 'https://cdn-icons-png.flaticon.com/512/1044/1044608.png',
+    transactionData: 'Jul 07, 2024',
+    transactionAmount: 300,
+  },
+];
+
+export const productData = [
+  {
+    id: 1,
+    storeName: 'Wingstop',
+    name: 'Chicken Wings',
+    price: 10.99,
+    discount: '50%',
+    priceAfterDiscount: 5.49,
+    image:
+      'https://cdn.cheapism.com/images/original-hot-wingstop.max-825x550.jpg',
+  },
+  {
+    id: 2,
+    storeName: 'Pizza Hut',
+    name: 'Pepperoni Pizza',
+    price: 15.99,
+    discount: '20%',
+    priceAfterDiscount: 12.79,
+    image:
+      'https://w7.pngwing.com/pngs/544/160/png-transparent-pizza-hut-restaurant-pizza-delivery-pizza-food-cheese-recipe.png',
+  },
+  {
+    id: 3,
+    storeName: "McDonald's",
+    name: 'Big Mac',
+    price: 5.99,
+    discount: '10%',
+    priceAfterDiscount: 5.39,
+    image:
+      'https://www.mcdonalds.com/content/dam/sites/mcdonaldsmenu/nfl/images/product_mcdonalds.png',
+  },
+  {
+    id: 4,
+    storeName: 'Subway',
+    name: 'Italian BMT',
+    price: 6.99,
+    discount: '15%',
+    priceAfterDiscount: 5.94,
+    image:
+      'https://www.allrecipes.com/thmb/r6AiELAYCRkEtawhdfSMSrxZYkM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-subway-taste-test-4x3-7089b564638a438d822f29712fb4b9aa.jpg',
+  },
+  {
+    id: 5,
+    storeName: 'Starbucks',
+    name: 'Caramel Macchiato',
+    price: 4.95,
+    discount: '5%',
+    priceAfterDiscount: 4.7,
+    image:
+      'https://cdn.cheapism.com/images/original-hot-wingstop.max-825x550.jpg',
+  },
+  {
+    id: 6,
+    storeName: 'KFC',
+    name: 'Original Recipe Chicken',
+    price: 12.99,
+    discount: '25%',
+    priceAfterDiscount: 9.74,
+    image:
+      'https://cdn.cheapism.com/images/original-hot-wingstop.max-825x550.jpg',
+  },
+  {
+    id: 7,
+    storeName: 'Taco Bell',
+    name: 'Crunchy Tacos',
+    price: 3.49,
+    discount: '10%',
+    priceAfterDiscount: 3.14,
+    image:
+      'https://cdn.cheapism.com/images/original-hot-wingstop.max-825x550.jpg',
+  },
+  {
+    id: 8,
+    storeName: "Domino's",
+    name: 'Cheese Pizza',
+    price: 11.99,
+    discount: '15%',
+    priceAfterDiscount: 10.19,
+    image:
+      'https://cdn.cheapism.com/images/original-hot-wingstop.max-825x550.jpg',
+  },
+  {
+    id: 9,
+    storeName: "Dunkin' Donuts",
+    name: 'Boston Kreme Donut',
+    price: 1.99,
+    discount: '20%',
+    priceAfterDiscount: 1.59,
+    image:
+      'https://cdn.cheapism.com/images/original-hot-wingstop.max-825x550.jpg',
+  },
+  {
+    id: 10,
+    storeName: 'Chipotle',
+    name: 'Chicken Burrito',
+    price: 8.99,
+    discount: '15%',
+    priceAfterDiscount: 7.64,
+    image:
+      'https://cdn.cheapism.com/images/original-hot-wingstop.max-825x550.jpg',
+  },
+];
+
+export const wingmallFoodBanner = [
+  {
+    id: 1,
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    text: 'ORDER NOW',
+  },
+  {
+    id: 2,
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    text: 'LEARN MORE',
+  },
+  {
+    id: 3,
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    text: 'ORDER NOW',
+  },
+  {
+    id: 4,
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    text: 'LEARN MORE',
+  },
+  {
+    id: 5,
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    text: 'ORDER NOW',
+  },
+  {
+    id: 6,
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    text: 'LEARN MORE',
+  },
+];
+
+export const promotionData = [
+  {
+    id: 1,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Free Delivery', 'Breakfast Deals'],
+    image:
+      'https://eacnews.asia/uploads/images/1667784624_9e336d199d495e998d23.jpg',
+    discount: 'Buy 1 Get 1 Free',
+    deliveryCharge: 'Free',
+    duration: '38min',
+    rating: 4.5,
+  },
+  {
+    id: 2,
+    storeName: 'GG Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Free Delivery', 'Lunch Specials'],
+    image: 'https://www.ggear.com.kh/wp-content/uploads/2019/03/Web-banner.jpg',
+    discount: '30%',
+    deliveryCharge: 'Free',
+    duration: '25min',
+    rating: 4.8,
+  },
+  {
+    id: 3,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Dinner Deals'],
+    image:
+      'https://i.ytimg.com/vi/VcNEdwqPnQM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWShUMA8=&rs=AOn4CLCjAVIVGc-1vMapQKyhDQligv0CWQ',
+    discount: '20%',
+    deliveryCharge: '$1.99',
+    duration: '40min',
+    rating: 4.3,
+  },
+  {
+    id: 4,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Healthy Options'],
+    image:
+      'https://www.royalphnompenhhospital.com/royalpp/storage/app/uploads/2/2024-03-28/khmer_new_year_promotion_web_01_01.jpg',
+    discount: '15%',
+    deliveryCharge: 'Free',
+    duration: '30min',
+    rating: 4.7,
+  },
+  {
+    id: 5,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Free Delivery'],
+    image:
+      'https://pressocm.gov.kh/wp-content/uploads/2023/11/History-of-Water-Festival-Floating-Lanterns-and-Praying-to-the-Moon-001.jpg',
+    discount: '25%',
+    deliveryCharge: 'Free',
+    duration: '20min',
+    rating: 4.6,
+  },
+  {
+    id: 6,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Italian Cuisine'],
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    discount: '40%',
+    deliveryCharge: '$2.50',
+    duration: '50min',
+    rating: 4.2,
+  },
+  {
+    id: 7,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Free Delivery', 'Japanese Cuisine'],
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    discount: '35%',
+    deliveryCharge: 'Free',
+    duration: '60min',
+    rating: 4.4,
+  },
+  {
+    id: 8,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Sweet Treats'],
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    discount: '10%',
+    deliveryCharge: '$1.50',
+    duration: '45min',
+    rating: 4.9,
+  },
+  {
+    id: 9,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Mexican Cuisine'],
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    discount: '50%',
+    deliveryCharge: 'Free',
+    duration: '55min',
+    rating: 4.6,
+  },
+  {
+    id: 10,
+    storeName: 'Lukaku Coffee',
+    name: 'Cappuccino',
+    price: 4.99,
+    priceAfterDiscount: 3.99,
+    type: ['Discount', 'Italian Cuisine', 'Family Meals'],
+    image:
+      'https://scontent.fpnh7-1.fna.fbcdn.net/v/t39.30808-6/463613273_528555306593660_7856442987142661283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hzeOwprLkvoQ7kNvgGAYn9W&_nc_zt=23&_nc_ht=scontent.fpnh7-1.fna&_nc_gid=A5lMuJH3224wJLrbphM2B16&oh=00_AYBKPiS0krx1cCrBAaa3aAUOCWz1M_a7-MObVPD1Qs1Xeg&oe=67291277',
+    discount: '45%',
+    deliveryCharge: '$3.00',
+    duration: '70min',
+    rating: 4.3,
+  },
+];
+
+export const SURGAR_LEVEL = [
+  {
+    id: 1,
+    label: 'Extra Sweet',
+    value: 'extraSweet',
+  },
+  {
+    id: 2,
+    label: 'Less Sweet',
+    value: 'lessSweet',
+  },
+  {
+    id: 3,
+    label: 'Sweet',
+    value: 'sweet',
   },
 ];

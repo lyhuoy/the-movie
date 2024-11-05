@@ -1,5 +1,6 @@
+import { BlurView } from 'expo-blur';
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -9,7 +10,6 @@ import Animated, {
 interface ProgressBarProps {
   progress: number;
 }
-
 const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
   const animatedProgress = useSharedValue(0);
 
@@ -23,8 +23,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
 
   return (
     <View style={styles.container}>
+      <BlurView intensity={80} tint="light" style={StyleSheet.absoluteFill} />
       <Animated.View style={[styles.bar, animatedStyle]} />
-      <Text>{Math.round(animatedProgress.value)}%</Text>
     </View>
   );
 };
@@ -32,8 +32,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
 const styles = StyleSheet.create({
   container: {
     height: 5,
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     borderRadius: 10,
+    overflow: 'hidden',
   },
   bar: {
     height: 5,

@@ -58,8 +58,7 @@ export default function MoviesScreen() {
         scrollEventThrottle={16}
         showsHorizontalScrollIndicator={false}
         snapToInterval={width}
-        decelerationRate={0}
-        bounces={false}
+        decelerationRate={'fast'}
         onEndReachedThreshold={0.1}
         keyExtractor={(item) => item.id.toString()}
         onScroll={Animated.event(
@@ -97,7 +96,6 @@ export default function MoviesScreen() {
               ]}
             >
               <Image
-                cachePolicy={'memory'}
                 source={{ uri: item.poster }}
                 style={{
                   width: imageWidth,

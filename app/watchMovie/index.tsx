@@ -24,11 +24,12 @@ import { animeSeries, kdramaSeries, movies, tvShows } from '@/constants/dummy';
 import ContinueToWatch from '@/components/ContinueToWatch';
 import MovieSeriesList from '@/components/MovieSeriesList';
 import Constant from 'expo-constants';
+import { BlurView } from 'expo-blur';
 
 export default function HomeMovie() {
   const router = useRouter();
   const { width, height } = Dimensions.get('screen');
-  const IMAGE_HEIGHT = height / 2.2;
+  const IMAGE_HEIGHT = height / 2;
   const SHADOWN_HEIGHT = IMAGE_HEIGHT;
 
   const onTrendingPress = () => {
@@ -101,6 +102,7 @@ export default function HomeMovie() {
           headerOpacity,
         ]}
       />
+
       <Animated.View
         style={[
           {
@@ -130,17 +132,26 @@ export default function HomeMovie() {
             style={{ width: 45, height: 45, borderRadius: 25 }}
           />
         </TouchableOpacity>
+
         <TouchableOpacity
+          onPress={() => router.back()}
           style={{
-            backgroundColor: 'rgba(255,255,255,0.3)',
-            width: 45,
-            height: 45,
             borderRadius: 50,
-            justifyContent: 'center',
-            alignItems: 'center',
+            overflow: 'hidden',
           }}
         >
-          <Feather name="search" size={24} color="#fff" />
+          <BlurView
+            intensity={50}
+            tint="light"
+            style={{
+              height: 45,
+              width: 45,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Feather name="search" size={24} color="#fff" />
+          </BlurView>
         </TouchableOpacity>
       </Animated.View>
       <Animated.ScrollView
@@ -187,18 +198,24 @@ export default function HomeMovie() {
             >
               <TouchableOpacity
                 style={{
-                  flexDirection: 'row',
-                  backgroundColor: 'rgba(255,255,255,0.4)',
-                  width: 110,
-                  height: 40,
-                  alignItems: 'center',
+                  overflow: 'hidden',
                   borderRadius: 50,
-                  gap: 2,
-                  justifyContent: 'center',
                 }}
               >
-                <Entypo name="controller-play" size={20} color="white" />
-                <Text style={styles.text}>Play</Text>
+                <BlurView
+                  tint="light"
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 110,
+                    height: 40,
+                    gap: 5,
+                  }}
+                >
+                  <Entypo name="controller-play" size={20} color="white" />
+                  <Text style={styles.text}>Play</Text>
+                </BlurView>
               </TouchableOpacity>
               <TouchableOpacity
                 style={{

@@ -5,6 +5,16 @@
 
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
+export const primaryColor = '#191970'; // Bright orange-red
+export const secondaryColor = '#FFC107'; // Warm yellow
+export const accentColor = '#4CAF50'; // Fresh green
+export const backgroundColor = '#f4f7f8'; // White background
+export const lightTextColor = '#757575'; // Light gray for secondary text
+export const borderColor = '#ecebeb'; // Light gray for borders
+export const subtextColor = '#A1A1A1';
+export const textColor = '#5b5858';
+export const boneColor = '#E1E9E5';
+export const unhingedWhite = '#E1DFEA';
 
 export const Colors = {
   light: {

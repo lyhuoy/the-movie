@@ -1,8 +1,10 @@
-import { Text, StatusBar, TouchableOpacity, ScrollView } from 'react-native';
+import { Text, StatusBar, ScrollView } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Href, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
+import { LinearGradient } from 'expo-linear-gradient';
+import PressableButton from '@/components/PressableButton';
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -28,6 +30,21 @@ export default function HomeScreen() {
       title: 'Watch Movie App',
       path: 'watchMovie',
     },
+    {
+      id: 5,
+      title: 'redBus',
+      path: 'redBus',
+    },
+    {
+      id: 6,
+      title: 'WingMall',
+      path: 'wingMall',
+    },
+    {
+      id: 7,
+      title: 'Facebook Profile',
+      path: 'facebookProfile',
+    },
   ];
 
   const onNavigate = (path: string) => {
@@ -36,8 +53,12 @@ export default function HomeScreen() {
   };
 
   return (
-    <SafeAreaView>
-      <StatusBar animated barStyle={'default'} />
+    <SafeAreaView
+      style={{
+        flex: 1,
+      }}
+    >
+      <StatusBar barStyle="default" />
 
       <ScrollView
         scrollEventThrottle={16}
@@ -46,18 +67,40 @@ export default function HomeScreen() {
         }}
       >
         {animationList.map((item, index) => (
-          <TouchableOpacity
+          <PressableButton
             key={index}
             style={{
-              backgroundColor: 'lightblue',
-              padding: 10,
-              margin: 10,
-              borderRadius: 5,
+              shadowColor: 'lightgray',
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.25,
+              shadowRadius: 3.84,
+              elevation: 5,
             }}
             onPress={() => onNavigate(item.path)}
           >
-            <Text>{item.title}</Text>
-          </TouchableOpacity>
+            <LinearGradient
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              colors={['white', 'lightblue']}
+              style={{
+                padding: 10,
+                borderRadius: 5,
+                margin: 10,
+              }}
+            >
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: 'black',
+                }}
+              >
+                {item.title}
+              </Text>
+            </LinearGradient>
+          </PressableButton>
         ))}
       </ScrollView>
     </SafeAreaView>

@@ -1,21 +1,13 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
@@ -31,17 +23,26 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack
-      screenOptions={{
-        animation: 'fade',
-      }}
-    >
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="movies" options={{ headerShown: false }} />
-      <Stack.Screen name="shareElement" options={{ headerShown: false }} />
-      <Stack.Screen name="movieApp" options={{ headerShown: false }} />
-      <Stack.Screen name="watchMovie" options={{ headerShown: false }} />
-      <Stack.Screen name="+not-found" />
-    </Stack>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          animation: 'fade',
+        }}
+      >
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="movies" />
+        <Stack.Screen name="shareElement" />
+        <Stack.Screen name="movieApp" />
+        <Stack.Screen name="watchMovie" />
+        <Stack.Screen name="redBus" />
+        <Stack.Screen name="MovieSplash" />
+        <Stack.Screen name="facebookProfile" />
+        <Stack.Screen name="trackingOrderStatus" />
+        <Stack.Screen name="pixelWallpaper" />
+        <Stack.Screen name="+not-found" />
+      </Stack>
+    </GestureHandlerRootView>
   );
 }
